@@ -426,11 +426,25 @@ l = [10, 20, ['a','b','c'], 30, 40]
 
 # wap to find even no. and odd no.
 
-n  = int(input("Enter a number: "))
-def even_odd(n):
-    if n % 2 == 0:
-        print(n, "is Even")
-    else:
-        print(n, "is Odd")
+# n  = int(input("Enter a number: "))
+# def even_odd(n):
+#     if n % 2 == 0:
+#         print(n, "is Even")
+#     else:
+#         print(n, "is Odd")
 
-even_odd(n)
+# even_odd(n)
+
+# def add(a,b):
+#     return a + b
+
+# sum = add(10,20)
+# print("Sum:", sum)
+
+# def add(a, b):
+#     print("this output:",a + b)
+#     # return a + b
+
+# result = add(10, 20)
+
+# print("Result:", result) # if i don't use return then it will print None because function does not return any value
