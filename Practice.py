@@ -448,3 +448,19 @@ l = [10, 20, ['a','b','c'], 30, 40]
 # result = add(10, 20)
 
 # print("Result:", result) # if i don't use return then it will print None because function does not return any value
+
+
+# a = 10
+
+# def f1():
+#     a = 99
+#     print("access local variable:-",a)
+#     print("Access global variable:-",globals()["a"])
+
+# f1()
+
+def f1(name,msg):
+    print("Hello",name,msg)
+    
+f1(name = "kanishak", msg = "Hi")
+f1(msg='hello', name="kannu")
