@@ -455,7 +455,7 @@ l = [10, 20, ['a','b','c'], 30, 40]
 # def f1():
 #     a = 99
 #     print("access local variable:-",a)
-#     print("Access global variable:-",globals()["a"])
+#     print("Access global variable:-",globals()['a'])
 
 # f1()
 
@@ -464,3 +464,38 @@ def f1(name,msg):
     
 f1(name = "kanishak", msg = "Hi")
 f1(msg='hello', name="kannu")
+
+
+# a = 10
+
+# def f1():
+#     global a
+#     a = 30
+#     print(a)
+
+# def f2():
+#     print(a)
+    
+# f2()
+# f1()
+# f2()
+
+# def add(a,b):
+#     print(a+b)
+    
+# add(10,20)
+# # add(10)
+# add(19,2,3)
+
+# def f1(*n):
+#     print(n)
+    
+# f1("sai","om")
+# f1()
+# f1(10,20,30)
+# f1("saiket",10,"harsh")
+
+def add(*n):
+    print("sum is: ", n+n)
+    
+add(1,2)

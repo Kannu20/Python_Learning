@@ -133,9 +133,23 @@
 
 n = int(input('Enter a number: '))
 
+# for i in range(n):
+#     for j in range(i):
+#         print(" ",end="")
+#     for k in range(2*(n-i) -1):
+#         print("*",end="")
+#     print()
+
 for i in range(n):
-    for j in range(i):
+    for k in range(n-1-i):
         print(" ",end="")
-    for k in range(2*(n-i) -1):
+    for j in range(2*i+1):
         print("*",end="")
     print()
+for l in range(i+1):
+    for m in range(l):
+        print(" ",end="")
+    for t in range(2*(n-l) -1):
+        print("*",end="")
+    print()
+    
