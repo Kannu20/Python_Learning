@@ -125,6 +125,7 @@
 #         print("*",end="")
 #     print()
 
+# Q8
 # *********
 #  *******
 #   *****
@@ -140,16 +141,75 @@ n = int(input('Enter a number: '))
 #         print("*",end="")
 #     print()
 
-for i in range(n):
-    for k in range(n-1-i):
-        print(" ",end="")
-    for j in range(2*i+1):
-        print("*",end="")
-    print()
-for l in range(i+1):
-    for m in range(l):
-        print(" ",end="")
-    for t in range(2*(n-l) -1):
-        print("*",end="")
-    print()
-    
+# Q9
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+
+# def upper():
+#     for i in range(n):
+#         for j in range(n-i-1):
+#             print(" ",end="")
+#         for k in range(2*i+1):
+#             print("*",end="")
+#         print()
+
+# def lower():
+#     for i in range(n):
+#         for j in range(i):
+#             print(" ",end="")
+#         for k in range(2*(n-i) -1):
+#             print("*",end="")
+#         print()
+        
+# upper()
+# lower()
+
+# Q10
+# *
+# **
+# ***
+# ****
+# ***
+# **
+# *
+
+# def upper():
+#     for i in range(n):
+#         for j in range(i+1):
+#             print("*",end="")
+#         print()
+# def lower():
+#     for i in range(n):
+#         for j in range(n-i-1):
+#             print("*",end="")
+#         print()
+        
+# upper()
+# lower()
+
+# Q11
+# 1 
+
+# 0 1 
+
+# 1 0 1 
+
+# 0 1 0 1 
+
+# 1 0 1 0 1
+
+# for i in range(n):
+#     for j in range(i+1):
+#         if (i+j)%2 == 0:
+#             print(1,end=" ")
+#         else:
+#             print(0,end=" ")
+#     print()
