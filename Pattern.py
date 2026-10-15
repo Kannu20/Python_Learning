@@ -213,3 +213,17 @@ n = int(input('Enter a number: '))
 #         else:
 #             print(0,end=" ")
 #     print()
+
+def right():
+    for i in range(n):
+        # left pattern
+        for j in range(i+1):
+            print(j+1,end="")
+        # Space
+        for k in range(2*(n-i-1)):
+            print(" ",end="")
+        # right pattern
+        for j in range(1+i,0,-1):
+            print(j,end="")
+        print()
+right()

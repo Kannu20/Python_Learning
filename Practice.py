@@ -459,11 +459,11 @@ l = [10, 20, ['a','b','c'], 30, 40]
 
 # f1()
 
-def f1(name,msg):
-    print("Hello",name,msg)
+# def f1(name,msg):
+#     print("Hello",name,msg)
     
-f1(name = "kanishak", msg = "Hi")
-f1(msg='hello', name="kannu")
+# f1(name = "kanishak", msg = "Hi")
+# f1(msg='hello', name="kannu")
 
 
 # a = 10
@@ -495,7 +495,39 @@ f1(msg='hello', name="kannu")
 # f1(10,20,30)
 # f1("saiket",10,"harsh")
 
-def add(*n):
-    print("sum is: ", n+n)
+# def add(*n):
+#     print("sum is: ", n+n)
     
-add(1,2)
+# add(1,2)
+
+n = int(input("enter a no:-"))
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        result = n*fact(n-1)
+    return result
+
+print("factorial of",n,"is", fact(n))
+print("----------------Greet Function--------------------")
+def greet(n):
+    if n == 0:      
+        return 1
+
+    print("hello")
+    return greet(n - 1)   
+
+print(greet(n))
+
+# def f1():
+#     print("hello")
+
+# def outer():
+#     print("I am outer function")
+
+#     def inner():
+#         print("I am inner function")
+
+#     inner()
+
+# outer()
