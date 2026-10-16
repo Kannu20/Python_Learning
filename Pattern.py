@@ -343,25 +343,52 @@ n = int(input('Enter a number: '))
 # upper()
 # lower()
 
-def upper():
-    for i in range(n):
-        for j in range(i+1):
-            print("*",end="")
-        for s in range(2*(n-i-1)):
-            print(" ",end="")
-        for j in range(i+1):
-            print("*",end="")
-        print()
-def lower():
-    for i in range(n):
-        for j in range(n-1-i):
-            print("*",end="")
-        for s in range(2*(i+1)):
-            print(" ",end="")
-        for j in range(n-1-i):
-            print("*",end="")
-        print()
+# *      *
+# **    **
+# ***  ***
+# ********
+# ***  ***
+# **    **
+# *      *
+
+# def upper():
+#     for i in range(n):
+#         for j in range(i+1):
+#             print("*",end="")
+#         for s in range(2*(n-i-1)):
+#             print(" ",end="")
+#         for j in range(i+1):
+#             print("*",end="")
+#         print()
+# def lower():
+#     for i in range(n-1):
+#         for j in range(n-1-i):
+#             print("*",end="")
+#         for s in range(2*(i+1)):
+#             print(" ",end="")
+#         for j in range(n-1-i):
+#             print("*",end="")
+#         print()
         
         
-upper()
-lower()
+# upper()
+# lower()
+
+# ****
+# *  *
+# *  *
+# ****
+
+# for j in range(n):
+#     print("*",end="")
+# print()
+
+# for i in range(n-2):
+#     print("*",end="")
+#     for j in range(n-2):
+#         print(" ",end="")
+#     print("*")
+    
+# for j in range(n):
+#     print("*",end="")
+# print()
