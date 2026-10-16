@@ -278,7 +278,90 @@ n = int(input('Enter a number: '))
 # C C C 
 # D D D D 
 
-for i in range(n):
-    for j in range(i+1):
-        print(chr(65+i),end=" ")
-    print()
+# for i in range(n):
+#     for j in range(i+1):
+#         print(chr(65+i),end=" ")
+#     print()
+
+#    A
+#   ABA
+#  ABCBA
+# ABCDCBA
+
+# for i in range(n):
+#     for s in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(i+1):
+#         print(chr(65+j),end="")
+#     for j in range(i-1,-1,-1):
+#         print(chr(65+j),end="")
+#     print()
+
+# E 
+
+# D E 
+
+# C D E 
+
+# B C D E 
+
+# A B C D E
+
+# for i in range(n):
+#     for j in range(i,-1,-1):
+#         print(chr(65+n-1-j),end="")
+#     print()
+
+# ********
+# ***  ***
+# **    **
+# *      *
+# *      *
+# **    **
+# ***  ***
+# ********
+# def upper():
+#     for i in range(n):
+#         for j in range(n-i):
+#             print("*",end="")
+#         for s in range(2*i):
+#             print(" ",end="")
+#         for j in range(n-i):
+#             print("*",end="")
+#         print()
+        
+# def lower():
+#     for i in range(n):
+#         for j in range(i+1):
+#             print("*",end="")
+#         for s in range(2*(n-i-1)):
+#             print(" ",end="")
+#         for j in range(i+1):
+#             print("*",end="")
+#         print()
+        
+# upper()
+# lower()
+
+def upper():
+    for i in range(n):
+        for j in range(i+1):
+            print("*",end="")
+        for s in range(2*(n-i-1)):
+            print(" ",end="")
+        for j in range(i+1):
+            print("*",end="")
+        print()
+def lower():
+    for i in range(n):
+        for j in range(n-1-i):
+            print("*",end="")
+        for s in range(2*(i+1)):
+            print(" ",end="")
+        for j in range(n-1-i):
+            print("*",end="")
+        print()
+        
+        
+upper()
+lower()
