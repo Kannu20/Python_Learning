@@ -66,6 +66,15 @@ n = int(input("Enter Number:-"))
 # s = str(n)
 # print(s[::-1])
 
+# other approach
+# rn = 0
+
+# while n > 0:
+#     digit = n % 10
+#     n = n // 10
+#     rn = (rn * 10) + digit
+# print(rn)
+
 # Example 1:
 # Input: n = 121
 
