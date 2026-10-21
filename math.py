@@ -221,3 +221,13 @@ n = int(input("Enter Number:-"))
 
 # Explanation: The divisors of 8 are 1, 2, 4, 8, thus it is not a prime number.
 
+count = 0
+
+for i in range(1, n+1):
+    if n % i == 0:
+        count += 1
+        
+if count == 2:
+    print("true")
+else:
+    print("false")
