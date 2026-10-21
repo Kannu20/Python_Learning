@@ -221,13 +221,50 @@ n = int(input("Enter Number:-"))
 
 # Explanation: The divisors of 8 are 1, 2, 4, 8, thus it is not a prime number.
 
-count = 0
+# count = 0
 
-for i in range(1, n+1):
-    if n % i == 0:
-        count += 1
+# for i in range(1, n+1):
+#     if n % i == 0:
+#         count += 1
         
-if count == 2:
-    print("true")
-else:
-    print("false")
+# if count == 2:
+#     print("true")
+# else:
+#     print("false")
+
+# 790. Count of Prime Numbers till N
+# You are given an integer n. You need to find out the number of prime numbers in the range [1, n] (inclusive). Return the number of prime numbers in the range.
+
+# A prime number is a number which has no divisors except, 1 and itself.
+
+# Example 1:
+# Input: n = 6
+
+# Output: 3
+
+# Explanation: Prime numbers in the range [1, 6] are 2, 3, 5.
+
+# Example 2:
+# Input: n = 10
+
+# Output: 4
+
+# Explanation: Prime numbers in the range [1, 10] are 2, 3, 5, 7.
+
+
+# count = 0
+
+
+# for i in range(2, n+1):
+    
+#     divisor = 0
+    
+#     for j in range(1, i+1):
+#         if i % j == 0:
+#             divisor += 1
+        
+#     if divisor == 2:
+#         count += 1
+        
+# print(count)
+        
