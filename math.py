@@ -13,7 +13,7 @@
 
 # Explanation: There are 2 digits in 14.
 
-n = int(input("Enter Number:-"))
+# n = int(input("Enter Number:-"))
 
 # s = str(n)
 
@@ -268,3 +268,87 @@ n = int(input("Enter Number:-"))
         
 # print(count)
         
+        
+# You are given two integers n1 and n2. You need find the Greatest Common Divisor (GCD) of the two given numbers. Return the GCD of the two numbers.
+
+# The Greatest Common Divisor (GCD) of two integers is the largest positive integer that divides both of the integers.
+
+# Example 1:
+# Input: n1 = 4, n2 = 6
+
+# Output: 2
+
+# Explanation: Divisors of n1 = 1, 2, 4, Divisors of n2 = 1, 2, 3, 6
+
+# Greatest Common divisor = 2.
+
+# Example 2:
+# Input: n1 = 9, n2 = 8
+
+# Output: 1
+
+# Explanation: Divisors of n1 = 1, 3, 9 Divisors of n2 = 1, 2, 4, 8.
+
+# Greatest Common divisor = 1.
+
+# n1 = int(input("Enter a number1 :- "))
+# n2 = int(input("Enter a number2 :- "))
+
+# l1 = set()
+# l2 = set()
+
+# for i in range(1, n1 + 1):
+#     if n1 % i == 0:
+#         l1.add(i)
+
+# for j in range(1, n2 + 1):
+#     if n2 % j == 0:
+#         l2.add(j)
+        
+# c = l1 & l2
+# print(len(c))
+
+
+# You are given two integers n1 and n2. You need find the Lowest Common Multiple (LCM) of the two given numbers. Return the LCM of the two numbers.
+
+# The Lowest Common Multiple (LCM) of two integers is the lowest positive integer that is divisible by both the integers.
+
+# Example 1:
+# Input: n1 = 4, n2 = 6
+
+# Output: 12
+
+# Explanation: 4 * 3 = 12, 6 * 2 = 12.
+
+# 12 is the lowest integer that is divisible both 4 and 6.
+
+# Example 2:
+# Input: n1 = 3, n2 = 5
+
+# Output: 15
+
+# Explanation: 3 * 5 = 15, 5 * 3 = 15.
+
+# 15 is the lowest integer that is divisible both 3 and 5.
+
+# n3 = n1 * n2
+# l = []
+# for i in range(1, n3+1):
+#     if i % n1 == 0 and i % n2 == 0:
+#         l.append(i)
+        
+# print(min(l))
+
+# divisor = 0
+# l = []
+# for i in range(1,n+1):
+    
+#     if n % i == 0:
+#         divisor += 1
+#         l.append(i)
+    
+# print(l)
+
+s = input("Enter String = ")
+for i in range(1):
+    print(s[::-1])
