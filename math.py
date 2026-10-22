@@ -349,6 +349,3 @@
     
 # print(l)
 
-s = input("Enter String = ")
-for i in range(1):
-    print(s[::-1])
