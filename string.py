@@ -93,3 +93,14 @@
 #         print(s[:i+1].strip("0"))
 #         break
 # print("")
+
+# strs = ["flowers" , "flow" , "fly", "flight" ]
+
+# first = strs[0]
+
+# for i in range(len(first)):
+#             for s in strs[1:]:
+#                 if i >= len(s) or first[i] != s[i]:
+#                     return first[:i]
+
+#         return first

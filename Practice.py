@@ -500,24 +500,24 @@ l = [10, 20, ['a','b','c'], 30, 40]
     
 # add(1,2)
 
-n = int(input("enter a no:-"))
-def fact(n):
-    if n == 0:
-        return 1
-    else:
-        result = n*fact(n-1)
-    return result
+# n = int(input("enter a no:-"))
+# def fact(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         result = n*fact(n-1)
+#     return result
 
-print("factorial of",n,"is", fact(n))
-print("----------------Greet Function--------------------")
-def greet(n):
-    if n == 0:      
-        return 1
+# print("factorial of",n,"is", fact(n))
+# print("----------------Greet Function--------------------")
+# def greet(n):
+#     if n == 0:      
+#         return 1
 
-    print("hello")
-    return greet(n - 1)   
+#     print("hello")
+#     return greet(n - 1)   
 
-print(greet(n))
+# print(greet(n))
 
 # def f1():
 #     print("hello")
@@ -531,3 +531,20 @@ print(greet(n))
 #     inner()
 
 # outer()
+
+# from array import array
+
+# a = array('i', [])
+
+# n = int(input("Enter your length of array: "))
+
+# for i in range(n):
+#     a.append(i)
+
+# print(a)
+
+import numpy as np
+
+a = np.array([[1, 2, 3, 4, 5, 6],[1, 2, 3, 4, 5]])
+
+print(a.shape)
