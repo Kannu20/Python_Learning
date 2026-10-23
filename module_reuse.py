@@ -24,4 +24,14 @@
 # print(x)
 # print(add(10,20))
 
+# from random import *
+# for i in range(10):
+#     print(randint(50,100), i)
 
+from random import *
+
+# for i in range(2):
+#     print(uniform(4,50))
+
+for i in range(10):
+    print(randrange(2,21,2))

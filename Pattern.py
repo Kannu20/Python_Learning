@@ -24,13 +24,9 @@
 
 # Q2
 # *
-
 # **
-
 # ***
-
 # ****
-
 # *****
 
 # n = int(input("Enter a number: "))
@@ -49,13 +45,9 @@
 # Q3
 
 # 1
-
 # 12
-
 # 123
-
 # 1234
-
 # 12345
 
 # n = int(input("Enter a number: "))
@@ -85,13 +77,9 @@
 
 # Q5
 # *****
-
 # ****
-
 # ***
-
 # **
-
 # *
 
 # n = int(input("Enter a number: "))
@@ -100,7 +88,8 @@
 #     for j in range(n-i):
 #         print("*", end='')
 #     print()
-        
+
+
       
 # Q6
 
@@ -127,7 +116,7 @@
 #  *******
 # *********
 
-# n = int(input("Enter a number: "))
+n = int(input("Enter a number: "))
 
 # for i in range(n):
 #     for j in range(n-i-1):
@@ -136,6 +125,11 @@
 #         print("*",end="")
 #     print()
 
+# or
+
+# for i in range(n):
+#     print(" "*(n-i-1)+"*"*(2*i+1))
+
 # Q8
 # *********
 #  *******
@@ -143,7 +137,7 @@
 #    ***
 #     *
 
-n = int(input('Enter a number: '))
+# n = int(input('Enter a number: '))
 
 # for i in range(n):
 #     for j in range(i):
@@ -405,5 +399,3 @@ n = int(input('Enter a number: '))
 # print()
 
 
-for i in n:
-    print("*")
