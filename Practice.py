@@ -543,8 +543,29 @@ l = [10, 20, ['a','b','c'], 30, 40]
 
 # print(a)
 
-import numpy as np
+# import numpy as np
 
-a = np.array([[1, 2, 3, 4, 5, 6],[1, 2, 3, 4, 5]])
+# a = np.array([[1, 2, 3, 4, 5, 6],[1, 2, 3, 4, 5]] , dtype=object)
+# print(a)
+# print(type(a))
+# s = a.shape
+# print(s)
+# print(type(s))
 
-print(a.shape)
+# b = np.array([[1, 2, 3, 4, 5, 6],[1, 2, 3, 4, 5, 6]])
+# print(b)
+# print(type(b))
+# c = b.shape
+# print(c)
+# print(type(c))
+
+# print(b)
+# print(type(b))
+# print(b.size)
+# print(b[4])
+# print(b.ndim)
+# print(b.dtype)
+
+from numpy import *
+a = ones(8,int)
+print(a)
