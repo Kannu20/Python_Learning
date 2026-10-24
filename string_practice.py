@@ -139,4 +139,26 @@
 # This is invalid because two different characters (a and p) cannot map to the same character (b) in a one-to-one mapping.
 
 # Therefore, no valid mapping exists and the output is false.
+s = input("Enter a String S = ")
+t = input("Enter a String T = ")
 
+s_to_t = {}
+t_to_s = {}
+
+for i in range(len(s)):
+    
+    a = s[i]
+    b = t[i]
+    
+    if a in s_to_t and s_to_t[a] != b:
+        print("False")
+        break
+    
+    if b in t_to_s and t_to_s[b] != a:
+        print("False")
+        break
+        
+    s_to_t[a] = b
+    t_to_s[b] = a
+    
+print("True")
