@@ -139,26 +139,91 @@
 # This is invalid because two different characters (a and p) cannot map to the same character (b) in a one-to-one mapping.
 
 # Therefore, no valid mapping exists and the output is false.
-s = input("Enter a String S = ")
-t = input("Enter a String T = ")
+# s = input("Enter a String S = ")
+# t = input("Enter a String T = ")
 
-s_to_t = {}
-t_to_s = {}
+# s_to_t = {}
+# t_to_s = {}
 
-for i in range(len(s)):
+# for i in range(len(s)):
     
-    a = s[i]
-    b = t[i]
+#     a = s[i]
+#     b = t[i]
     
-    if a in s_to_t and s_to_t[a] != b:
-        print("False")
-        break
+#     if a in s_to_t and s_to_t[a] != b:
+#         print("False")
+#         break
     
-    if b in t_to_s and t_to_s[b] != a:
-        print("False")
-        break
+#     if b in t_to_s and t_to_s[b] != a:
+#         print("False")
+#         break
         
-    s_to_t[a] = b
-    t_to_s[b] = a
+#     s_to_t[a] = b
+#     t_to_s[b] = a
     
-print("True")
+# print("True")
+
+# 324. Rotate String
+# Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+
+# A shift on s consists of moving the leftmost character of s to the rightmost position.
+
+# For example, if s = "abcde", then it will be "bcdea" after one shift.
+
+# Example 1:
+# Input : s = "abcde" , goal = "cdeab"
+
+# Output : true
+
+# Explanation :
+
+# After performing 2 shifts we can achieve the goal string from string s.
+
+# After first shift the string s is => bcdea
+
+# After second shift the string s is => cdeab.
+
+# Example 2:
+# Input : s = "abcde" , goal = "adeac"
+
+# Output : false
+
+# Explanation :
+
+# Any number of shift operations cannot convert string s to string goal.
+
+# s = input("enter s = ")
+# goal = input("enter goal = ")
+
+# if len(s) != len(goal):
+#     print("false")
+    
+# for i in range(len(s)):
+#     if s == goal:
+#         print("true")
+#         break
+#     s = s[1:] + s[0]
+    
+# print("false")
+
+# return len(s) == len(goal) and goal in (s+s)  #more optimized approach
+
+# s = input("enter s = ")
+# t = input("enter t = ")
+
+# if len(s) != len(t):
+#     print("false")
+
+    
+# for ch in s:
+#     if s.count(ch) != t.count(ch):
+#         print("false")
+    
+#     print("true")
+
+# t = sorted(s)
+# print(t)
+
+# s = ['e','e','r','t']
+# s.remove("e")
+# print(s)
