@@ -19,8 +19,8 @@
 
 # or 
 
-# for i in range(n):
-#     print("* "*n)
+for i in range(n):
+    print("* "*n)
 
 # Q2
 # *
@@ -71,7 +71,7 @@
 # n = int(input("Enter a number: "))
 
 # for i in range(n):
-#     for j in range(i+1):
+#     for j in range(n):
 #         print(i+1,end="")
 #     print()
 
@@ -178,6 +178,7 @@
 # lower()
 
 # Q10
+
 # *
 # **
 # ***
@@ -201,6 +202,7 @@
 # lower()
 
 # Q11
+
 # 1 
 
 # 0 1 
@@ -241,6 +243,7 @@
 #         print()
 # right()
 
+# Q13
 # 1 
 
 # 2 3 
@@ -251,6 +254,7 @@
 
 # 11 12 13 14 15
 
+# n = int(input("enter a no. :"))
 # num = 1
 # for i in range(n):
 #     for j in range(i+1):
@@ -276,7 +280,7 @@
 #     for i in range(48, n + 1):
 #         print(chr(i))
 
-# Q16
+# Q15
 
 # A 
 # B B 
@@ -288,6 +292,7 @@
 #         print(chr(65+i),end=" ")
 #     print()
 
+# Q16
 #    A
 #   ABA
 #  ABCBA
@@ -302,6 +307,7 @@
 #         print(chr(65+j),end="")
 #     print()
 
+# Q17
 # E 
 
 # D E 
@@ -317,6 +323,7 @@
 #         print(chr(65+n-1-j),end="")
 #     print()
 
+# Q18
 # ********
 # ***  ***
 # **    **
@@ -347,6 +354,8 @@
         
 # upper()
 # lower()
+
+# Q19
 
 # *      *
 # **    **
@@ -379,6 +388,7 @@
 # upper()
 # lower()
 
+# Q20
 # ****
 # *  *
 # *  *
@@ -398,6 +408,7 @@
 #     print("*",end="")
 # print()
 
+# Q21
 # E E E E E
 # D D D D D
 # C C C C C
@@ -412,3 +423,26 @@
 # for i in range(n, 0, -1):
 #     print((chr(64 + i) + " ") * n)
 
+# Q22
+# 1 2 3 4 5 
+# 1 2 3 4 5 
+# 1 2 3 4 5 
+# 1 2 3 4 5 
+# 1 2 3 4 5 
+
+n = int(input("Enter a number: "))
+
+# for i in range(n):
+#     for j in range(0, n):
+#         print(j+1,end=" ")
+#     print()
+
+# Q23
+# A B C
+# A B C
+# A B C
+
+for i in range(n):
+    for j in range(n):
+        print(chr(65 + j), end=" ")
+    print()
