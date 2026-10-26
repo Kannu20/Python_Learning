@@ -208,7 +208,7 @@
 
 # return len(s) == len(goal) and goal in (s+s)  #more optimized approach
 
-# s = input("enter s = ")
+s = input("enter s = ")
 # t = input("enter t = ")
 
 # if len(s) != len(t):
@@ -221,9 +221,11 @@
     
 #     print("true")
 
-# t = sorted(s)
-# print(t)
+t = sorted(s)
+result = []
 
-# s = ['e','e','r','t']
-# s.remove("e")
-# print(s)
+for ch in t:
+    if ch not in result:
+        result.append(ch)
+
+print(result)
