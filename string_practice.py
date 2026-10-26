@@ -208,7 +208,7 @@
 
 # return len(s) == len(goal) and goal in (s+s)  #more optimized approach
 
-s = input("enter s = ")
+# s = input("enter s = ")
 # t = input("enter t = ")
 
 # if len(s) != len(t):
@@ -221,11 +221,48 @@ s = input("enter s = ")
     
 #     print("true")
 
-t = sorted(s)
-result = []
+# t = sorted(s)
+# result = []
 
-for ch in t:
-    if ch not in result:
-        result.append(ch)
+# for ch in t:
+#     if ch not in result:
+#         result.append(ch)
 
-print(result)
+# print(result)
+
+
+# 79. Longest Common Prefix
+# Write a function to find the longest common prefix string amongst an array of strings.
+
+# If there is no common prefix, return an empty string "".
+
+# Example 1:
+# Input : str = ["flowers" , "flow" , "fly", "flight" ]
+
+# Output : "fl"
+
+# Explanation :
+
+# All strings given in array contains common prefix "fl".
+
+# Example 2:
+# Input : str = ["dog" , "cat" , "animal", "monkey" ]
+
+# Output : ""
+
+# Explanation :
+
+# There is no common prefix among the given strings in array.
+
+# str = input('Enter string = ')
+# prefix = str[0]
+
+# for s in str[1:]:
+#     while not s.startswith(prefix):
+#         prefix = prefix[:-1]
+        
+#     if prefix == "":
+#         print("")
+        
+# print(prefix)
+        

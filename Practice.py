@@ -566,6 +566,9 @@ l = [10, 20, ['a','b','c'], 30, 40]
 # print(b.ndim)
 # print(b.dtype)
 
-from numpy import *
-a = ones(8,int)
-print(a)
+# from numpy import *
+# a = ones(8,int)
+# print(a)
+
+strs = ["flower","flow","flight"]
+print(strs[:1])
