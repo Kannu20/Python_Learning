@@ -50,26 +50,61 @@ n = int(input("Enter a number: "))
 #     print()
 
 # christmas tree
-def tree(n):
-    for i in range(n):
-        for s in range(n-1-i):
-            print(" ",end="")
-        for j in range(2*i+1):
-            print("*",end="")
-        print()
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#    ** 
+#    ** 
+#    ** 
+#    ** 
+#    ** 
+# def tree(n):
+#     for i in range(n):
+#         for s in range(n-1-i):
+#             print(" ",end="")
+#         for j in range(2*i+1):
+#             print("*",end="")
+#         print()
 
-for i in range(n):
-    tree(n)
+# for i in range(n):
+#     tree(n)
     
-for i in range(1,n+1):
+# for i in range(1,n+1):
         
-        if n % 2 == 0:  
-            print(" "*(n//2)+"*"*(n//2),end=" ")
-            print()
+#         if n % 2 == 0:  
+#             print(" "*(n//2)+"*"*(n//2),end=" ")
+#             print()
                  
-        else:
-            print(" "*(n-2)+"*"*(n//2),end=" ")
-            print()
+#         else:
+#             print(" "*(n-2)+"*"*(n//2),end=" ")
+#             print()
+
+# 1
+# 2 3
+# 4 5 6
+# 7 8 9 10
 
 # num = 1
 # for i in range(n):
