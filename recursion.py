@@ -68,6 +68,34 @@
 #     return res
 # print(sum(nums))
 
-s = ["h", "e", "l", "l", "o"]
-s.reverse()
-print(s)
+# s = ["h", "e", "l", "l", "o"]
+# s.reverse()
+# print(s)
+
+s = "hah"
+
+# class Solution:
+#     def palindromeCheck(s):
+
+#         if len(s) <= 1:
+#             return True
+
+#         if s[0] != s[-1]:
+#             return False
+
+        
+#     print(palindromeCheck(s))
+
+num = int(input("Enter a num: "))
+def check(i):
+    if i == num:
+        print("True")
+    
+    if num % i == 0:
+        print("False")
+    
+    return check(i+1)
+
+if num <= 1:
+    print("False")
+    
