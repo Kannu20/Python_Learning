@@ -19,7 +19,7 @@
 # Explanation : first two natural numbers are 1, 2.
 
 # Sum is 1 + 2 => 3.
-n = int(input("enter N = "))
+# n = int(input("enter N = "))
 # def sum(N):
 #     if  N == 0:
 #         return 0
@@ -49,13 +49,25 @@ n = int(input("enter N = "))
 
 # Explanation : Factorial = 1 * 2 * 3 * 4 * 5 => 120
 
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        res = n*factorial(n-1)
-    return res
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         res = n*factorial(n-1)
+#     return res
 
-print(factorial(n))
+# print(factorial(n))
        
+# nums = [1,2,3,4,5]
 
+# def sum(nums):
+#     res = 0
+#     for i in range(len(nums)):
+#         res = res + nums[i]
+
+#     return res
+# print(sum(nums))
+
+s = ["h", "e", "l", "l", "o"]
+s.reverse()
+print(s)

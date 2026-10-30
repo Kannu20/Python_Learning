@@ -30,3 +30,5 @@ class Employee:
 e = Employee()
 
 e.display()
+
+# class Employe

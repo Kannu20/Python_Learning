@@ -121,36 +121,44 @@ n = int(input("Enter a number: "))
 #   *    *
 # *        *
 
-# def upper(n):
-#     for i in range(n):
-#         for s in range(i):
-#             print(" ",end="")
+def upper(n):
+    for i in range(n):
+        for s in range(i):
+            print(" ",end="")
         
-#         print("*",end="")
+        print("*",end="")
         
-#         for s in range(2*(n-i-1)-1):
-#             print(" ",end="")
+        for s in range(2*(n-i-1)-1):
+            print(" ",end="")
         
-#         if i != n - 1:
+        if i != n - 1:
+            print("*",end="")
+        
+        print()        
+        
+def lower(n):
+    for i in range(n-2,-1,-1):
+        for s in range(i):
+            print(" ",end="")
+        
+        print("*",end="")
+        
+        for s in range(2*(n-i-1)-1):
+            print(" ",end="")
+        
+        if i != n - 1:
+            print("*",end="")
+        
+        print() 
+        
+upper(n)
+lower(n)
+
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or i + j == n-1:
 #             print("*",end="")
-        
-#         print()        
-        
-# def lower(n):
-#     for i in range(n-2,-1,-1):
-#         for s in range(i):
+#         else:
 #             print(" ",end="")
-        
-#         print("*",end="")
-        
-#         for s in range(2*(n-i-1)-1):
-#             print(" ",end="")
-        
-#         if i != n - 1:
-#             print("*",end="")
-        
-#         print() 
-        
-# upper(n)
-# lower(n)
+#     print()
 
