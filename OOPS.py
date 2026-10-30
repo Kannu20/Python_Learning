@@ -75,3 +75,21 @@
 # e2.display()
 
 # print(e1.__dict__)
+
+# Instance Variable
+
+class Test:
+    def __init__(self):
+        self.a = 10
+    
+    def m1(self):
+        self.b = 20
+        
+t = Test()
+
+t.c = 9
+
+print(t.__dict__) # Here b = 30 is not print because here we don't call m1 so that's why the value of b is not executed
+
+t.m1()
+print(t.__dict__)

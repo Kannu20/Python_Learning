@@ -86,16 +86,16 @@ s = "hah"
         
 #     print(palindromeCheck(s))
 
-num = int(input("Enter a num: "))
-def check(i):
-    if i == num:
-        print("True")
+# num = int(input("Enter a num: "))
+# def check(i):
+#     if i == num:
+#         print("True")
     
-    if num % i == 0:
-        print("False")
+#     if num % i == 0:
+#         print("False")
     
-    return check(i+1)
+#     return check(i+1)
 
-if num <= 1:
-    print("False")
+# if num <= 1:
+#     print("False")
     
