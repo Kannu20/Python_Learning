@@ -31,21 +31,26 @@
 
 # e.display()
 
-class Employee:
-    def __init__(self):
-        self.eid = int(input("Enter eid: "))
-        self.ename = input("Enter ename: ")
-        self.eage = int(input("Enter eage: "))
+# class Employee:
+#     def __init__(self):
+#         self.eid = int(input("Enter eid: "))
+#         self.ename = input("Enter ename: ")
+#         self.eage = int(input("Enter eage: "))
         
-    def display(self):
-        print("Enter eid: ", self.eid)
-        print("Enter ename: ", self.ename)
-        print("Enter eage: ", self.eage)
+#     def display(self):
+#         print("Enter eid: ", self.eid)
+#         print("Enter ename: ", self.ename)
+#         print("Enter eage: ", self.eage)
         
-e = Employee()
-print()
-print("Employee Details Are: ")
-e.display()
+# e1 = Employee()
+# e2 = Employee()
+
+# print()
+
+# print("Employee Details Are: ")
+
+# e1.display()
+# e2.display()
 
 # With Multiple Parameters
 # class Employee:
