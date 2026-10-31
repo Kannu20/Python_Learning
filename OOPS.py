@@ -78,18 +78,36 @@
 
 # Instance Variable
 
+# class Test:
+#     def __init__(self):
+#         self.a = 10
+    
+#     def m1(self):
+#         self.b = 20
+        
+# t = Test()
+
+# t.c = 9
+
+# print(t.__dict__) # Here b = 30 is not print because here we don't call m1 so that's why the value of b is not executed
+
+# t.m1()
+# print(t.__dict__)
+
 class Test:
     def __init__(self):
         self.a = 10
-    
-    def m1(self):
-        self.b = 20
+        self.b = 20 
         
+    def m1(self):
+        print("inside the class")
+        
+        print(self.a)
+        print(self.b)
+
 t = Test()
 
-t.c = 9
-
-print(t.__dict__) # Here b = 30 is not print because here we don't call m1 so that's why the value of b is not executed
-
 t.m1()
-print(t.__dict__)
+print("outside of the class")
+print(t.a)
+print(t.b)

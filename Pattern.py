@@ -451,25 +451,3 @@ n = int(input("Enter a number: "))
 #     for s in range(n-1-i):
 #         print(" ",end="")
 
-
-# *       *
-#   *   *
-#     *
-#   *    *
-# *        *
-
-def upper(n):
-    for i in range(n):
-        for s in range(i):
-            print(" ",end="")
-        
-        print("*",end="")
-        
-        for s in range(2*(n-i-1)-1):
-            print(" ",end="")
-        
-        print("*",end="")
-        
-        print()        
-        
-upper(n)
