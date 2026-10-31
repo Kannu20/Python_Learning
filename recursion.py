@@ -22,8 +22,7 @@
 # n = int(input("enter N = "))
 # def sum(N):
 #     if  N == 0:
-#         return 0
-    
+#         return 0    
 #     Sum = N + sum(N-1)
 #     return Sum
    
@@ -98,4 +97,31 @@ s = "hah"
 
 # if num <= 1:
 #     print("False")
+    
+
+# 821. Reverse an array 2
+# Given an array nums of n integers, return reverse of the array.
+
+# Example 1:
+# Input : nums = [1, 2, 3, 4, 5]
+
+# Output : [5, 4, 3, 2, 1]
+
+# Example 2:
+# Input : nums = [1, 3, 3, 3, 5]
+
+# Output : [5, 3, 3, 3, 1]
+
+
+
+
+# nums = [1, 2, 3, 4, 5]
+
+nums = [1, 3, 3, 3, 5]
+# print(nums[::-1])
+
+def reverse(nums):
+    
+    
+    
     
