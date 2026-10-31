@@ -94,20 +94,40 @@
 # t.m1()
 # print(t.__dict__)
 
-class Test:
+# class Test:
+#     def __init__(self):
+#         self.a = 10
+#         self.b = 20 
+        
+#     def m1(self):
+#         print("inside the class")
+        
+#         print(self.a)
+#         print(self.b)
+
+# t = Test()
+
+# t.m1()
+# print("outside of the class")
+# print(t.a)
+# print(t.b)
+
+class test:
     def __init__(self):
         self.a = 10
-        self.b = 20 
+        self.b = 20
+        self.c = 30
         
     def m1(self):
-        print("inside the class")
+        del self.b # Delete the instance variable with in the class
         
-        print(self.a)
-        print(self.b)
+t1 = test()
+t2 = test()
 
-t = Test()
 
-t.m1()
-print("outside of the class")
-print(t.a)
-print(t.b)
+t1.m1()
+print("t1 = ", t1.__dict__)
+print("t2 = ", t2.__dict__)
+
+del t2.a
+print("t2 after deleting a element = ", t2.__dict__)
