@@ -112,22 +112,38 @@
 # print(t.a)
 # print(t.b)
 
-class test:
-    def __init__(self):
-        self.a = 10
-        self.b = 20
-        self.c = 30
+# class test:
+#     def __init__(self):
+#         self.a = 10
+#         self.b = 20
+#         self.c = 30
         
+#     def m1(self):
+#         del self.b # Delete the instance variable with in the class
+        
+# t1 = test()
+# t2 = test()
+
+
+# t1.m1()
+# print("t1 = ", t1.__dict__)
+# print("t2 = ", t2.__dict__)
+
+# del t2.a
+# print("t2 after deleting a element = ", t2.__dict__)
+
+
+# Local Variable
+class Test:
     def m1(self):
-        del self.b # Delete the instance variable with in the class
+        a = 10
+        print(a)
         
-t1 = test()
-t2 = test()
-
-
-t1.m1()
-print("t1 = ", t1.__dict__)
-print("t2 = ", t2.__dict__)
-
-del t2.a
-print("t2 after deleting a element = ", t2.__dict__)
+    def m2(self):
+        b = 20
+        print(b)
+        # print(a) pp# Here a is not defined because a is local variable and it is only accessible in m1 method
+        
+t = Test()
+t.m1()
+t.m2()

@@ -117,11 +117,22 @@ s = "hah"
 
 # nums = [1, 2, 3, 4, 5]
 
-nums = [1, 3, 3, 3, 5]
+# nums = [1, 3, 3, 3, 5]
 # print(nums[::-1])
 
-def reverse(nums):
+
+
     
+# nums = [1, 2, 3, 4, 5]
+
+nums = [1, 2, 1, 4, 5]
+
+n = len(nums)
+for i in range(n-1):
+    if nums[i] > nums[i+1]:
+        print("False")
+        break
+    else:
+        print("True")
     
-    
-    
+        
