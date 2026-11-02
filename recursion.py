@@ -120,19 +120,31 @@ s = "hah"
 # nums = [1, 3, 3, 3, 5]
 # print(nums[::-1])
 
+# Given an array nums of n integers, return true if the array nums is sorted in non-decreasing order or else false.
 
+# Example 1:
+# Input : nums = [1, 2, 3, 4, 5]
 
+# Output : true
+
+# Explanation : For all i (1 <= i <= 4) it holds nums[i] <= nums[i+1], hence it is sorted and we return true.
+
+# Example 2:
+# Input : nums = [1, 2, 1, 4, 5]
+
+# Output : false
+
+# Explanation : For i == 2 it does not hold nums[i] <= nums[i+1], hence it is not sorted and we return false.
+
+num = list(map(int, input("Enter the elements of the array separated by space: ").split()))
+def check(i):
     
-# nums = [1, 2, 3, 4, 5]
+    if i == len(num)-1:
+        return True
 
-nums = [1, 2, 1, 4, 5]
-
-n = len(nums)
-for i in range(n-1):
-    if nums[i] > nums[i+1]:
-        print("False")
-        break
-    else:
-        print("True")
+    if num[i] > num[i+1]:
+        return False
     
-        
+    return check(i+1)
+
+print(check(0))

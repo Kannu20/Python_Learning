@@ -248,7 +248,7 @@
 # a6 = a.rindex("is")
 # print(a6)
 
-l = [10, 20, ['a','b','c'], 30, 40]
+# l = [10, 20, ['a','b','c'], 30, 40]
 # print(l[-3][-3:-1]) # here -3 is the index of the list and -3:-1 is the index of the sublist
 
 # print([2,3][1]) # here 2 is the index of the list and 0 is the index of the sublist
@@ -570,5 +570,21 @@ l = [10, 20, ['a','b','c'], 30, 40]
 # a = ones(8,int)
 # print(a)
 
-strs = ["flower","flow","flight"]
-print(strs[:1])
+# strs = ["flower","flow","flight"]
+# print(strs[:1])
+
+
+
+num = 534
+
+t = len(str(num))
+
+
+if t <= 1:
+    print(num)
+
+digit = num % 10
+
+
+
+print(digit)
