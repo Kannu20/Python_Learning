@@ -136,15 +136,46 @@ s = "hah"
 
 # Explanation : For i == 2 it does not hold nums[i] <= nums[i+1], hence it is not sorted and we return false.
 
-num = list(map(int, input("Enter the elements of the array separated by space: ").split()))
-def check(i):
+# num = list(map(int, input("Enter the elements of the array separated by space: ").split()))
+# def check(i):
     
-    if i == len(num)-1:
-        return True
+#     if i == len(num)-1:
+#         return True
 
-    if num[i] > num[i+1]:
-        return False
+#     if num[i] > num[i+1]:
+#         return False
     
-    return check(i+1)
+#     return check(i+1)
 
-print(check(0))
+# print(check(0))
+
+# 965. Sum of Digits in a Given Number
+# Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
+
+# Example 1:
+# Input : num = 529
+
+# Output : 7
+
+# Explanation : In first iteration the digits sum will be = 5 + 2 + 9 => 16
+
+# In second iteration the digits sum will be 1 + 6 => 7.
+
+# Now single digit is remaining , so we return it.
+
+# Example 2:
+# Input : num = 101
+
+# Output : 2
+
+# Explanation : In first iteration the digits sum will be = 1 + 0 + 1 => 2
+
+# Now single digit is remaining , so we return it.
+num = int(input("Enter a num: "))
+def sumOfDigits(num):
+    if num < 10:
+        return num
+    else:
+        return sumOfDigits(sum(int(digit) for digit in str(num)))
+    
+print(sumOfDigits(num))
