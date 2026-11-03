@@ -71,7 +71,10 @@
 # s.reverse()
 # print(s)
 
-s = "hah"
+# from pyparsing import nums
+
+
+# s = "hah"
 
 # class Solution:
 #     def palindromeCheck(s):
@@ -171,11 +174,162 @@ s = "hah"
 # Explanation : In first iteration the digits sum will be = 1 + 0 + 1 => 2
 
 # Now single digit is remaining , so we return it.
-num = int(input("Enter a num: "))
-def sumOfDigits(num):
-    if num < 10:
-        return num
-    else:
-        return sumOfDigits(sum(int(digit) for digit in str(num)))
+# num = int(input("Enter a num: "))
+# def sumOfDigits(num):
+#     if num < 10:
+#         return num
+#     else:
+#         return sumOfDigits(sum(int(digit) for digit in str(num)))
     
-print(sumOfDigits(num))
+# print(sumOfDigits(num))
+
+
+from pyparsing import nums
+
+
+num = [3,2,5,1,6,7,8,9,12]
+
+# def sum(num):
+#     if len(num) == 0:
+#         return 0
+    
+#     return num[0] + sum(num[1:])
+
+# print(sum(num))
+
+# Linear Search using recursion
+# target = int(input("Enter the target: "))
+
+# def linearSearch(num, target, index):
+    
+#     # Base Case
+#     if index == len(num):
+#         return -1
+    
+#     if num[index] == target:
+#         return index
+    
+#     return linearSearch(num, target, index + 1)
+
+# print(linearSearch(num, target, 0))
+
+ 
+# Binary Search using recursion
+# key = int(input("Enter the key: "))
+# def binarySearch(num, start, end, key):
+    
+#     if start > end:
+#         return False
+    
+#     mid = start + (end - start) // 2
+    
+#     if num[mid] == key:
+#         return mid
+    
+#     if num[mid] < key:
+#         return binarySearch(num, mid + 1, end, key)
+    
+#     else:
+#         return binarySearch(num, start, mid - 1, key)
+    
+# print(binarySearch(num, 0,len(num)-1,key))
+# nums= [1,2,3,5,4,3]
+# target = 3
+# def binary(nums, start, end, target):
+#     if start > end:
+#         return min(nums)
+
+#     mid = start + (end - start) // 2
+
+#     if nums[mid] == target:
+#         return mid
+
+#     if nums[mid] < target:
+#         return binary(nums, mid + 1, end, target)
+
+#     if nums[mid] > target:
+#         return binary(nums, start, mid - 1, target)
+            
+# print(binary(nums, 0, len(nums) - 1, target))
+
+
+# 729. Lower Bound
+# Given a sorted array of nums and an integer x, write a program to find the lower bound of x.
+
+# The lower bound algorithm finds the first and smallest index in a sorted array where the value at that index is greater than or equal to a given key i.e. x.
+
+# If no such index is found, return the size of the array.
+
+# Example 1:
+# Input : nums= [1,2,2,3], x = 2
+
+# Output:1
+
+# Explanation:
+
+# Index 1 is the smallest index such that arr[1] >= x.
+
+# Example 2:
+# Input : nums= [3,5,8,15,19], x = 9
+
+# Output: 3
+
+# Explanation:
+
+# Index 3 is the smallest index such that arr[3] >= x.
+# nums= [1, 2, 2, 2, 3]
+# x = 2
+# def binary(nums, start, end, x):
+    
+#     if start > end:
+#         return start
+    
+#     mid = start + (end - start) // 2
+
+
+#     if nums[mid] < x:
+#         return binary(nums, mid + 1, end, x)
+    
+#     else:
+#         return binary(nums, start, mid - 1, x)
+
+# print(binary(nums, 0, len(nums) - 1, x))
+
+# 750. Upper Bound
+# Given a sorted array of nums and an integer x, write a program to find the upper bound of x.
+
+# The upper bound of x is defined as the smallest index i such that nums[i] > x.
+
+# If no such index is found, return the size of the array.
+
+# Example 1:
+# Input : n= 4, nums = [1,2,2,3], x = 2
+
+# Output:3
+
+# Explanation:
+
+# Index 3 is the smallest index such that arr[3] > x.
+
+# Example 2:
+# Input : n = 5, nums = [3,5,8,15,19], x = 9
+
+# Output: 3
+
+# Explanation:
+
+# Index 3 is the smallest index such that arr[3] > x.
+nums = [1,2,2,3]
+x = 2
+def binary(nums, start, end, x):
+        if start > end:
+            return start
+
+        mid = start + (end - start) // 2
+
+        if nums[mid] <= x:
+            return binary(nums, mid + 1, end, x)
+
+        else:
+            return binary(nums, start, mid - 1, x)
+print(binary(nums, 0, len(nums)-1,x))

@@ -575,16 +575,6 @@
 
 
 
-num = 534
+import numpy as np
 
-t = len(str(num))
-
-
-if t <= 1:
-    print(num)
-
-digit = num % 10
-
-
-
-print(digit)
+print(np.__version__)
