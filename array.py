@@ -91,11 +91,26 @@
 
 # The value 6 does not occur in the array, hence output is -1
 
-nums = list(map(int, input("Enter array elements: ").split()))
-n = len(nums)
-target = int(input("enter target = "))
+# nums = list(map(int, input("Enter array elements: ").split()))
+# n = len(nums)
+# target = int(input("enter target = "))
+# for i in range(n):
+#     if nums[i] == target:
+#         print(i)
+#         break
+# print("-1")
+
+# Majority Element
+A = list(map(int, input("Enter array elements: ").split()))
+n = len(A)
+count = 0
+
 for i in range(n):
-    if nums[i] == target:
-        print(i)
+    for j in range(n):
+        if A[i] == A[j]:
+            count += 1
+    if count > n//2:
+        print(A[i])
         break
-print("-1")
+    else:
+        print("-1")

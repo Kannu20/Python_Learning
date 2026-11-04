@@ -575,6 +575,12 @@
 
 
 
-import numpy as np
+# import numpy as np
 
-print(np.__version__)
+# print(np.__version__)
+
+
+for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)
