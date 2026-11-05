@@ -601,26 +601,63 @@
 # print("Average marks of student 2:", s2.avg())
 
 # Class method is a method that is bound to the class and not the instance of the class. It can access and modify class state that applies across all instances of the class. Class methods are defined using the @classmethod decorator and take cls as their first parameter, which refers to the class itself.
-class student:
+# class student:
     
-    inst = "Grass" # Static variable
+#     inst = "Grass" # Static variable
     
-    def __init__(self, m1, m2, m3):
-        self.m1 = m1
-        self.m2 = m2
-        self.m3 = m3
+#     def __init__(self, m1, m2, m3):
+#         self.m1 = m1
+#         self.m2 = m2
+#         self.m3 = m3
         
-    def avg(self): # Instance method
-        print((self.m1 + self.m2 + self.m3) / 3)
+#     def avg(self): # Instance method
+#         print((self.m1 + self.m2 + self.m3) / 3)
     
+#     @classmethod
+#     def m4(cls):  # cls act as a self , we want to define a class method so we can use @classmethod decorator
+#         print(cls.inst)
+        
+# s1 = student(78, 89, 76)
+# s2 = student(78, 69, 97)
+
+# s1.avg()
+# s2.avg()
+
+# student.m4() # we can call class method by using class name
+
+class Test:
+    a = 100
+    
+    def __init__(self):
+        print("Inside the constructor")
+        print(self.a)
+        print(Test.a)
+        del Test.a
+    
+    def m1(self):
+        print("Inside of the instance method")
+        print(self.a)
+
+        
     @classmethod
-    def m4(cls):  # cls act as a self , we want to define a class method so we can use @classmethod decorator
-        print(cls.inst)
+    def m2(cls):
+        print("Inaide the class method")
+        print(cls.a)
+        print(Test.a)
         
-s1 = student(78, 89, 76)
-s2 = student(78, 69, 97)
+    @staticmethod
+    def m3():
+        print("Inside static method")
+        print(Test.a)
+        
+t = Test()
+t.m1()
+t.m2()
+t.m3()
 
-s1.avg()
-s2.avg()
+print()
 
-student.m4() # we can call class method by using class name
+print("outside of the class")
+print(t.a)
+print(Test.a)
+
