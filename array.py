@@ -101,16 +101,55 @@
 # print("-1")
 
 # Majority Element
-A = list(map(int, input("Enter array elements: ").split()))
-n = len(A)
-count = 0
+# A = list(map(int, input("Enter array elements: ").split()))
+# n = len(A)
+# count = 0
 
-for i in range(n):
-    for j in range(n):
-        if A[i] == A[j]:
-            count += 1
-    if count > n//2:
-        print(A[i])
-        break
-    else:
-        print("-1")
+# for i in range(n):
+#     for j in range(n):
+#         if A[i] == A[j]:
+#             count += 1
+#     if count > n//2:
+#         print(A[i])
+#         break
+#     else:
+#         print("-1")
+
+# 832. Left Rotate Array by One
+
+# Given an integer array nums, rotate the array to the left by one.
+
+# Note: There is no need to return anything, just modify the given array.
+
+# Example 1:
+# Input: nums = [1, 2, 3, 4, 5]
+
+# Output: [2, 3, 4, 5, 1]
+
+# Explanation:
+
+# Initially, nums = [1, 2, 3, 4, 5]
+
+# Rotating once to left -> nums = [2, 3, 4, 5, 1]
+
+# Example 2:
+# Input: nums = [-1, 0, 3, 6]
+
+# Output: [0, 3, 6, -1]
+
+# Explanation:
+
+# Initially, nums = [-1, 0, 3, 6]
+
+# Rotating once to left -> nums = [0, 3, 6, -1]
+
+nums = list(map(int, input("Enter array elements: ").split()))
+
+n = len(nums)
+
+temp = nums[0]
+
+for i in range(n-1):
+    nums[i] = nums[i+1]
+nums[n-1] = temp
+print(nums)

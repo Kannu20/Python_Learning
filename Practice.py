@@ -580,7 +580,47 @@
 # print(np.__version__)
 
 
-for i in range(1, 11):
-    if i == 5:
-        break
-    print(i)
+# for i in range(1, 11):
+#     if i == 5:
+#         break
+#     print(i)
+
+# class Student:
+#     def __init__(self, m1, m2, m3):
+#         self.m1 = m1
+#         self.m2 = m2
+#         self.m3 = m3
+    
+#     def avg(self):
+#         return (self.m1 + self.m2 + self.m3) / 3
+    
+# s1 = Student(78, 89, 76)
+# s2 = Student(78, 69, 97)
+
+# print("Average marks of student 1:", s1.avg())
+# print("Average marks of student 2:", s2.avg())
+
+# Class method is a method that is bound to the class and not the instance of the class. It can access and modify class state that applies across all instances of the class. Class methods are defined using the @classmethod decorator and take cls as their first parameter, which refers to the class itself.
+class student:
+    
+    inst = "Grass" # Static variable
+    
+    def __init__(self, m1, m2, m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+        
+    def avg(self): # Instance method
+        print((self.m1 + self.m2 + self.m3) / 3)
+    
+    @classmethod
+    def m4(cls):  # cls act as a self , we want to define a class method so we can use @classmethod decorator
+        print(cls.inst)
+        
+s1 = student(78, 89, 76)
+s2 = student(78, 69, 97)
+
+s1.avg()
+s2.avg()
+
+student.m4() # we can call class method by using class name
