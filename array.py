@@ -102,7 +102,7 @@
 
 # Majority Element
 # Brute Force Approach it will give TLE for large input
-A = list(map(int, input("Enter array elements: ").split()))
+# A = list(map(int, input("Enter array elements: ").split()))
 # n = len(A)
 # count = 0
 
@@ -119,20 +119,20 @@ A = list(map(int, input("Enter array elements: ").split()))
 # What is this algorithm?
 # The Boyer-Moore Voting Algorithm is an efficient algorithm used to find the majority element in an array. A majority element is defined as an element that appears more than n/2 times in the array, where n is the size of the array.
 
-candidate = None
-count = 0
+# candidate = None
+# count = 0
 
-for num in A:
+# for num in A:
     
-    if count == 0:
-        candidate= num
+#     if count == 0:
+#         candidate= num
     
-    if num == candidate:
-        count += 1
-    else:
-        count -= 1
+#     if num == candidate:
+#         count += 1
+#     else:
+#         count -= 1
     
-print(candidate)
+# print(candidate)
 
 # 832. Left Rotate Array by One
 
@@ -405,3 +405,262 @@ print(candidate)
 #         j += 1
         
 # print(result)
+
+# 512. Leaders in an Array
+# Given an integer array nums, return a list of all the leaders in the array.
+
+# A leader in an array is an element whose value is strictly greater than all elements to its right in the given array. The rightmost element is always a leader. The elements in the leader array must appear in the order they appear in the nums array.
+
+# Example 1:
+# Input: nums = [1, 2, 5, 3, 1, 2]
+
+# Output: [5, 3, 2]
+
+# Explanation:
+
+# 2 is the rightmost element, 3 is the largest element in the index range [3, 5], 5 is the largest element in the index range [2, 5]
+
+# Example 2:
+# Input: nums = [-3, 4, 5, 1, -4, -5]
+
+# Output: [5, 1, -4, -5]
+
+# Explanation:
+
+# -5 is the rightmost element, -4 is the largest element in the index range [4, 5], 1 is the largest element in the index range [3, 5] and 5 is the largest element in the range [2, 5]
+
+# nums = [-3, 4, 5, 1, -4, -5]
+# result = []
+
+# max = nums[-1]
+# result.append(max)
+
+# for i in range(len(nums)-2, -1, -1):
+    
+#     if nums[i] > max:
+#         result.append(nums[i])
+#         max = nums[i]
+        
+# print(result[::-1])
+
+# 375. Rearrange array elements by sign
+# Given an integer array nums of even length consisting of an equal number of positive and negative integers.Return the answer array in such a way that the given conditions are met:
+
+# Every consecutive pair of integers have opposite signs.
+# For all integers with the same sign, the order in which they were present in nums is preserved.
+# The rearranged array begins with a positive integer.
+# Example 1:
+# Input : nums = [2, 4, 5, -1, -3, -4]
+
+# Output : [2, -1, 4, -3, 5, -4]
+
+# Explanation:
+
+# The positive number 2, 4, 5 maintain their relative positions and -1, -3, -4 maintain their relative positions
+
+# nums = [2, 4, 5, -1, -3, -4]
+# n = len(nums)
+# result = [0] * n
+# pos = 0
+# neg = 1
+
+# for num in nums:
+    
+#     if num > 0:
+#         result[pos] = num
+#         pos += 2
+        
+#     else:
+#         result[neg] = num
+#         neg += 2
+        
+# print(result)
+
+
+# 107. Print the matrix in spiral manner
+# Given an M * N matrix, print the elements in a clockwise spiral manner.
+
+# Return an array with the elements in the order of their appearance when printed in a spiral manner.
+
+# Example 1:
+# Input: matrix = [[1, 2, 3], [4 ,5 ,6], [7, 8, 9]]
+
+# Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+# Explanation:
+
+# The elements in the spiral order are 1, 2, 3 -> 6, 9 -> 8, 7 -> 4, 5
+
+# Example 2:
+# Input: matrix = [[1, 2, 3, 4], [5, 6, 7, 8]]
+
+# Output: [1, 2, 3, 4, 8, 7, 6, 5]
+
+# Explanation:
+
+# The elements in the spiral order are 1, 2, 3, 4 -> 8, 7, 6, 5
+
+# matrix = [[1],[2],[4],[3],[5]]
+# result = []
+# top = 0
+# bottom = len(matrix) - 1
+
+# right = len(matrix[0]) - 1
+# left = 0
+# while top <= bottom and left <= right:
+#     for i in range(left, right + 1):
+#         result.append(matrix[top][i])
+#     top += 1
+
+#     for i in range(top , bottom + 1):
+#         result.append(matrix[i][right])
+        
+#     right -= 1
+
+#     if top <= bottom:
+#         for i in range(right, left - 1, -1):
+#             result.append(matrix[bottom][i])
+            
+#         bottom -= 1
+
+#     if left <= right:
+#         for i in range(bottom, top-1, -1):
+#             result.append(matrix[i][left])
+
+#         left += 1
+
+# print(result)
+
+# 161. Pascal's Triangle I
+# Given two integers r and c, return the value at the rth row and cth column (1-indexed) in a Pascal's Triangle.
+
+# In Pascal's triangle:
+
+# The first row contains a single element 1.
+# Each row has one more element than the previous row.
+# Every row starts and ends with 1.
+# For all interior elements (i.e., not at the ends), the value at position (r, c) is computed as the sum of the two elements directly above it from the previous row:
+
+# Pascal[r][c]=Pascal[r−1][c−1]+Pascal[r−1][c]
+# where indexing is 1-based
+# Example 1:
+# Input: r = 4, c = 2
+
+# Output: 3
+
+# Explanation:
+
+# The Pascal's Triangle is as follows:
+
+# 1
+
+# 1 1
+
+# 1 2 1
+
+# 1 3 3 1
+
+# ....
+
+# Thus, value at row 4 and column 2 = 3
+
+# Example 2:
+# Input: r = 5, c = 3
+
+# Output: 6
+
+# Explanation:
+
+# The Pascal's Triangle is as follows:
+
+# 1
+
+# 1 1
+
+# 1 2 1
+
+# 1 3 3 1
+
+# 1 4 6 4 1
+
+# ....
+
+# Thus, value at row 5 and column 3 = 6
+# r = 4
+# c = 2
+# prev = [1]
+
+# for i in range(1, r):
+#     curr = [1]
+
+#     for j in range(1, i):
+#         curr.append(prev[j-1] + prev[j])
+
+#     curr.append(1)
+#     prev = curr
+
+# print(prev[c-1])
+
+# 378. Pascal's Triangle II
+# Given an integer r, return all the values in the rth row (1-indexed) in Pascal's Triangle in correct order.
+
+# In Pascal's triangle:
+
+# The first row has one element with a value of 1.
+# Each row has one more element in it than its previous row.
+# The value of each element is equal to the sum of the elements directly above it when arranged in a triangle format.
+# Example 1:
+# Input: r = 4
+
+# Output: [1, 3, 3, 1]
+
+# Explanation:
+
+# The Pascal's Triangle is as follows:
+
+# 1
+
+# 1 1
+
+# 1 2 1
+
+# 1 3 3 1
+
+# ....
+
+# Thus the 4th row is [1, 3, 3, 1]
+
+# Example 2:
+# Input: r = 5
+
+# Output: [1, 4, 6, 4, 1]
+
+# Explanation:
+
+# The Pascal's Triangle is as follows:
+
+# 1
+
+# 1 1
+
+# 1 2 1
+
+# 1 3 3 1
+
+# 1 4 6 4 1
+
+# ....
+
+# Thus the 5th row is [1, 4, 6, 4, 1]
+r = 4
+prev = [1]
+
+for i in range(1, r):
+    curr = [1]
+    
+    for j in range(1, i):
+        curr.append(prev[j-1] + prev[j])
+        
+    curr.append(1)
+    prev = curr
+print(prev)
