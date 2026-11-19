@@ -19,8 +19,8 @@
 
 # or 
 
-for i in range(n):
-    print("* "*n)
+# for i in range(n):
+#     print("* "*n)
 
 # Q2
 # *
@@ -430,7 +430,7 @@ for i in range(n):
 # 1 2 3 4 5 
 # 1 2 3 4 5 
 
-n = int(input("Enter a number: "))
+# n = int(input("Enter a number: "))
 
 # for i in range(n):
 #     for j in range(0, n):
@@ -451,3 +451,17 @@ n = int(input("Enter a number: "))
 #     for s in range(n-1-i):
 #         print(" ",end="")
 
+n = "kanishak"
+
+# for i in n:        
+#     print(i)
+
+
+# def name(n):
+#     if n == 0:
+#         return
+    
+#     print("kanishak")
+#     name(n-1)
+    
+# name(10)

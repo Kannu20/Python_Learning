@@ -134,16 +134,30 @@
 
 
 # Local Variable
-class Test:
-    def m1(self):
-        a = 10
-        print(a)
+# class Test:
+#     def m1(self):
+#         a = 10
+#         print(a)
         
-    def m2(self):
-        b = 20
-        print(b)
-        # print(a) pp# Here a is not defined because a is local variable and it is only accessible in m1 method
+#     def m2(self):
+#         b = 20
+#         print(b)
+#         # print(a) # Here a is not defined because a is local variable and it is only accessible in m1 method
         
-t = Test()
-t.m1()
-t.m2()
+# t = Test()
+# t.m1()
+# t.m2()
+
+# Inner Class
+class outer:
+    
+    def __init__(self):
+        print("outer class constructor")
+        
+    class inner:
+        
+        def __init__(self):
+                print("inner class constructor")
+                
+o = outer()
+i = o.inner()

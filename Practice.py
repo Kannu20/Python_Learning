@@ -625,39 +625,39 @@
 
 # student.m4() # we can call class method by using class name
 
-class Test:
-    a = 100
+# class Test:
+#     a = 100
     
-    def __init__(self):
-        print("Inside the constructor")
-        print(self.a)
-        print(Test.a)
-        del Test.a
+#     def __init__(self):
+#         print("Inside the constructor")
+#         print(self.a)
+#         print(Test.a)
+#         del Test.a
     
-    def m1(self):
-        print("Inside of the instance method")
-        print(self.a)
+#     def m1(self):
+#         print("Inside of the instance method")
+#         print(self.a)
 
         
-    @classmethod
-    def m2(cls):
-        print("Inaide the class method")
-        print(cls.a)
-        print(Test.a)
+#     @classmethod
+#     def m2(cls):
+#         print("Inaide the class method")
+#         print(cls.a)
+#         print(Test.a)
         
-    @staticmethod
-    def m3():
-        print("Inside static method")
-        print(Test.a)
+#     @staticmethod
+#     def m3():
+#         print("Inside static method")
+#         print(Test.a)
         
-t = Test()
-t.m1()
-t.m2()
-t.m3()
+# t = Test()
+# t.m1()
+# t.m2()
+# t.m3()
 
-print()
+# print()
 
-print("outside of the class")
-print(t.a)
-print(Test.a)
+# print("outside of the class")
+# print(t.a)
+# print(Test.a)
 

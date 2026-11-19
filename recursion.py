@@ -319,17 +319,27 @@ num = [3,2,5,1,6,7,8,9,12]
 # Explanation:
 
 # Index 3 is the smallest index such that arr[3] > x.
-nums = [1,2,2,3]
-x = 2
-def binary(nums, start, end, x):
-        if start > end:
-            return start
+# nums = [1,2,2,3]
+# x = 2
+# def binary(nums, start, end, x):
+#         if start > end:
+#             return start
 
-        mid = start + (end - start) // 2
+#         mid = start + (end - start) // 2
 
-        if nums[mid] <= x:
-            return binary(nums, mid + 1, end, x)
+#         if nums[mid] <= x:
+#             return binary(nums, mid + 1, end, x)
 
-        else:
-            return binary(nums, start, mid - 1, x)
-print(binary(nums, 0, len(nums)-1,x))
+#         else:
+#             return binary(nums, start, mid - 1, x)
+# print(binary(nums, 0, len(nums)-1,x))
+
+# Print name through recursion 10 times
+def name(n):
+    if n == 0:
+        return
+    
+    print("kanishak")
+    name(n-1)
+    
+name(10)
