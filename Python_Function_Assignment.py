@@ -206,3 +206,24 @@
 # print(power(3))
 # print(power(4,4))
 # print(power(5))
+
+
+# 19 Write a function introduce(name, country="India") that prints My name is <name> and I am from <country>. Call it in 3 ways: only name, name and country by position, and name and country by keyword.
+
+# def introduce(name, country="India"):
+#     print("My name is", name,"and I am from",country)
+    
+# introduce("kanishak")
+# introduce("kanishak","india")
+# introduce(name = "kanishak", country="india")
+
+class A:
+    def __init__(self):
+        print("A class constructor")
+        
+class B(A):
+    pass
+    # def __init__(self):
+    #     print("B class constructor")
+        
+b = B()
