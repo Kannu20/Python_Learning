@@ -74,3 +74,100 @@
 #         return "c is largest"
     
 # print(max_of_three(a, b, c))
+
+# Section B: Local and Global Variables
+
+# 8 Write a program with a global variable name = "Ravi". Create a function that prints this global variable and call it.
+
+# name = "Ravi" #global variable
+
+# def main():
+#     print(name)
+# main()
+
+# 9 What will be the output of this code? Why does the error occur?
+# def show():    
+#     x = 50    
+#     print(x) 
+# show()
+# print(x)
+
+# ans = this code will give the output 50 first after that NameError: name 'x' is not defined for the print that we call after show() because we define x inside the function so we can not access it outside the function because it is local variable for the particular fuction show()
+
+# 10 Create a function with a local variable city = "Jaipur" and print it inside the function. Then try printing it outside and write in a comment why it fails.
+
+# def main():
+#     city = "Jaipur"
+#     print(city)
+# main()
+# print(city)
+
+# It will fails because we make the city as a local variable in the function main and if we try to call this local varible outside of the function then it will give NameError
+
+# Predict the output (local variable priority):
+# x = 100 
+# def test():    
+#     x = 10
+#     print("Inside:", x) 
+# test()
+# print("Outside:", x)
+
+# For inside it print 10 print if we declare local variable in a function then it will give first priority to local variable so that's why inside print 10 and outside print 100 because it will print outside of the function if any local variable not assign then it will always print global variable
+
+# Using the same variable name value = 5 as both global and local, write a program that proves the local variable gets priority inside the function.
+
+# value = 5 # global variable
+
+# def main():
+#     value = 6 # local variable
+    
+#     print("local variable: ",value)
+    
+# main()
+
+# here both variable of local and global are same but here 1st priority is given to local variable
+
+# Using globals(), write a function that has a local variable a = 20 and a global variable a = 99. Print both values from inside the function.
+
+# Using globals(), write a function that has a local variable a = 20 and a global variable a = 99. Print both values from inside the function.
+
+# a = 99
+
+# def main():
+#     a = 20
+#     print("local variable =",a)
+    
+#     print("global variable =",globals()['a'])
+    
+# main()
+
+# 14 Write a function increase() that uses the global keyword to add 10 to a global variable count = 0. Call it 3 times and print count.
+
+# count = 0
+# def increase():
+#     global count
+#     count += 10
+# increase()
+# increase()
+# increase()
+# print(count)
+    
+# 15 Create a global variable balance = 1000. Write two functions, deposit(amount) and withdraw(amount), that modify the global balance. Show the balance after a few operations.
+
+# balance = 1000
+
+# def deposit(amount):
+#     global balance
+#     balance += amount
+#     print('Your deposited amount is = ', amount)
+#     print('Your updated amount is = ', balance)
+    
+# deposit(2000)
+
+# def withdraw(amount):
+#     global balance
+#     balance -= amount
+#     print('Your withdraw amount is = ', amount)
+#     print('Your updated amount is = ', balance)
+    
+# withdraw(500)
