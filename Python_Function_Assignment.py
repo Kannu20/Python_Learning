@@ -217,13 +217,4 @@
 # introduce("kanishak","india")
 # introduce(name = "kanishak", country="india")
 
-class A:
-    def __init__(self):
-        print("A class constructor")
-        
-class B(A):
-    pass
-    # def __init__(self):
-    #     print("B class constructor")
-        
-b = B()
+

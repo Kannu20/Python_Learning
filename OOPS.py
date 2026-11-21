@@ -338,3 +338,14 @@ class loc(branch):
 
 print(isinstance(loc,name))
 print(isinstance(loc,name))
+
+class A:
+    def __init__(self):
+        print("A class constructor")
+        
+class B(A):
+    pass
+    # def __init__(self):
+    #     print("B class constructor")
+        
+b = B()

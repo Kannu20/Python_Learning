@@ -465,3 +465,13 @@ n = "kanishak"
 #     name(n-1)
     
 # name(10)
+
+m = int(input())
+m1 = set(map(int, input().split()))
+
+n = int(input())
+n1 = set(map(int, input().split()))
+
+s = m1 ^ n1
+for num in sorted(s):
+    print(num)
