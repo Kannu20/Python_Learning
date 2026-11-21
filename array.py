@@ -742,13 +742,24 @@
 
 # Output: matrix = [[5, 4, 2, 0], [6, 5, 0, 1], [7, 0, 3, 1], [0, 5, 1, 2]]
 
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-n = len(matrix)
-for i in range(n):
-    for j in range(i+1, n):
-        matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+# n = len(matrix)
+# for i in range(n):
+#     for j in range(i+1, n):
+#         matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
         
-for i in range(n):
-    matrix[i].reverse()
-print(matrix)
+# for i in range(n):
+#     matrix[i].reverse()
+# print(matrix)
+# Infinite loop using while and for
+
+# n = 1
+# while n > 0:
+#     print(1)
+
+
+# from itertools import count
+
+# for i in count():
+#     print(i)
