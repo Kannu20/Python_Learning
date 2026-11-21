@@ -171,3 +171,38 @@
 #     print('Your updated amount is = ', balance)
     
 # withdraw(500)
+
+# Section C: Types of Arguments
+
+# 16 (Positional arguments) Write a function student_info(name, age, course) that prints the details. Call it with positional arguments. Then change the order of the arguments and observe what happens.
+
+# def student_info(name, age, course):
+#     print("student name is = ",name)
+#     print("student age is = ",age)
+#     print("student course is = ",course)
+    
+# student_info("kanishak",21,"Python")
+# student_info(21,"Python", "Kannu")
+# student_info("Python",21, "Kannu")
+
+# if we change the order of the arguments then it will impact on our ans it will change the ans
+
+# 17 (Keyword arguments) Call the same student_info() function using keyword arguments in a different order. Does the output stay correct?
+
+# def student_info(name, age, course):
+#     print("My name is",name,"age is",age,"course is",course)
+    
+# student_info(name = "kanishak",age = 21,course= "python")
+# student_info(course = "Python",age = 21,name= "kanishak")
+# student_info(age = 22,name = "kannu",course= "c")
+
+# here order is different but output is same because here we define keyword and parameter so it will not impact on the order
+
+# 18 (Default arguments) Write a function power(base, exp=2) that returns base ** exp. Call it with one argument, and then with two arguments.
+
+# def power(base, exp = 2):
+#     return base**exp
+
+# print(power(3))
+# print(power(4,4))
+# print(power(5))
