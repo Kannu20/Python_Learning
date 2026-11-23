@@ -218,3 +218,59 @@
 # introduce(name = "kanishak", country="india")
 
 
+# 20 (Variable-length *args) Write a function total(*numbers) that returns the sum of any number of arguments. Test it with 2 numbers, 5 numbers, and no numbers.
+
+# def total(*numbers):
+#     return sum(numbers)
+
+# print(total(1,2))
+# print(total(1,2,3,4,5))
+# print(total())
+
+# 21 Write a function average(*nums) that returns the average of all given numbers. If no number is given, return 0.
+
+# nums = tuple(map(int,input("Enter nums = ").split()))
+# def average(*nums):
+#     if len(nums) == 0:
+#         return 0
+#     return sum(nums) / len(nums)
+    
+    
+# print(average(*nums))
+
+# 22 (Keyword variable-length **kwargs) Write a function show_details(**info) that prints each key and value. Call it with name="Amit", age=20, city="Delhi".
+
+# def show_details(**info):
+#     for K , V in info.items():
+#         print(K, "=" , V)
+        
+# show_details(name = "Amit", age = "20", city = "Delhi")
+    
+    
+# 23 Write a function profile(name, *hobbies, **details) that prints the name, then the hobbies, then the details. Call it with a name, 3 hobbies, and 2 extra details such as age and city.
+
+# def profile(name, *hobbies, **details):
+#     print("My name is", name)
+#     print("My hobbies are =", hobbies)
+    
+#     print("My Details")
+#     for K, V in details.items():
+#         print(K, "=", V)
+    
+
+# profile("kanishak","playing","singing","dancing", city="Jaipur", age=22)
+
+
+# Find the errors in the code below and fix them:
+
+# def demo(a, b=10, c): # here c give error because in python we can't use non default argument after default argument there are 2 correct ways first we can place c before b and 2nd case is we should have to assign some value to c i.e make c as also a default argument
+# def demo(a, b = 10, c = 12):
+def demo(a, c , b = 10):
+    print(a, b, c) 
+def info(name, age):
+    print(name, age)
+# info(age=20, "Riya") # this line give error positional argument follows keyword argument and here we didn't assign the keyword for riya so the correct output is below
+info(age = 20, name="Riya")
+# info("Riya", 20, 30) # this line give error because info have only 2 arguments and here we pass 3 argument so if we call any function it is compulsory to assign only those argument that are assigned in this particular function
+
+info("Riya", 22)
