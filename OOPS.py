@@ -149,17 +149,17 @@
 # t.m2()
 
 # Inner Class
-class outer:
+# class outer:
     
-    def __init__(self):
-        print("outer class constructor")
+#     def __init__(self):
+#         print("outer class constructor")
         
-    class inner:
+#     class inner:
         
-        def __init__(self):
-            print("inner class constructor")
-        def m1(self):
-            print("inner class method")
+#         def __init__(self):
+#             print("inner class constructor")
+#         def m1(self):
+#             print("inner class method")
                 
 # o = outer()
 # i = o.inner()
@@ -298,33 +298,33 @@ class outer:
 # s.display_salary()
 
 # Herirchial Inheritence
-class branch:
-    def get_branch(self):
-        self.bcode = int(input("enter bcode: "))
+# class branch:
+#     def get_branch(self):
+#         self.bcode = int(input("enter bcode: "))
     
         
-    def display_branch(self):
-        print("Branch code is: ", self.bcode)
+#     def display_branch(self):
+#         print("Branch code is: ", self.bcode)
         
         
-class name(branch):
-    def get_branch_name(self):
-        self.bname = input("branch name: ")
+# class name(branch):
+#     def get_branch_name(self):
+#         self.bname = input("branch name: ")
         
-    def display_name(self):
-        print("branch name is : ", self.bname)
+#     def display_name(self):
+#         print("branch name is : ", self.bname)
 
 # n = name()
 # n.get_branch()
 # n.get_branch_name()
 # n.display_branch()
 # n.display_name()
-class loc(branch):
-    def get_branch_loc(self):
-        self.loc = input("branch location: ")
+# class loc(branch):
+#     def get_branch_loc(self):
+#         self.loc = input("branch location: ")
         
-    def display_loc(self):
-        print("location is: ",self.loc)
+#     def display_loc(self):
+#         print("location is: ",self.loc)
         
 # l = loc()
 # l.get_branch()
@@ -336,16 +336,75 @@ class loc(branch):
 # print(issubclass(name, branch))
 # print(issubclass(loc, branch))
 
-print(isinstance(loc,name))
-print(isinstance(loc,name))
+# print(isinstance(loc,name))
+# print(isinstance(loc,name))
 
-class A:
-    def __init__(self):
-        print("A class constructor")
+# class A:
+#     def __init__(self):
+#         print("A class constructor")
         
-class B(A):
-    pass
-    # def __init__(self):
-    #     print("B class constructor")
+# class B(A):
+#     pass
+#     # def __init__(self):
+#     #     print("B class constructor")
         
-b = B()
+# b = B()
+#  Hybrid Inhertence
+# class A:
+#     def f1(self):
+#         print("f1 function of class A")
+        
+# class B(A):
+#     def f2(self):
+#         print("f2 function of class B")
+        
+# class C(A):
+#     def f3(self):
+#         print("f3 function of class C")
+        
+# class D(B,C):
+#     def f4(self):
+#         print("f4 function of class D")
+        
+# d = D()
+# d.f1()
+# d.f2()
+# d.f3()
+# d.f4()
+
+# Bonus Questions
+
+# 25 Write a function calculator(a, b, operation="add") that returns the result of add, subtract, multiply, or divide depending on operation. Handle division by zero by returning a message.
+
+def calculator(a, b, operation="add"):
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a-b
+    elif operation == "multiply":
+        return a*b
+    elif operation == "divide":
+        if b == 0:
+            return "Can't divide by 0"
+        return a/b
+    else:
+        return "enter valid input"
+    
+# print(calculator(10,20))
+# print(calculator(10,20,"subtract"))
+# print(calculator(10,20,"multiply"))
+# print(calculator(10,20,"divide"))
+# print(calculator(10,0, "divide"))
+
+# 26 Write a function count_calls() that uses a global variable to count how many times it has been called, and prints the count each time.
+
+n = int(input("Enter value of n that how much time you want to to run the function = "))
+count = 0
+def count_calls():
+    global count
+    count += 1
+    print(count)
+
+for i in range(n):       
+    count_calls()
+    
