@@ -372,27 +372,28 @@
 # d.f3()
 # d.f4()
 
-# class Book:
-#     def __init__(self, pages):
-#         self.pages = pages
+class Book:
+    def __init__(self, pages):
+        self.pages = pages
         
-#     def __add__(self, other):
-#         return self.pages + other.pages
+    def __add__(self, other):
+        return self.pages + other.pages
     
-# b1 = Book(10)
-# b2 = Book(20)
+b1 = Book(10)
+b2 = Book(20)
 
 # print(b1+b2)
+print(b1.__add__(b2))
 
-class Test:
-    def m1(self):
-        print("no argument")     
+# class Test:
+#     def m1(self):
+#         print("no argument")     
         
-    def m1(self, a):
-        print("1 argument")
+#     def m1(self, a):
+#         print("1 argument")
         
-    def m1(self, a, b):
-        print("2 argument")
+#     def m1(self, a, b):
+#         print("2 argument")
         
-t = Test()
-t.m1(10)
+# t = Test()
+# t.m1(10)
