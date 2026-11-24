@@ -274,3 +274,41 @@ info(age = 20, name="Riya")
 # info("Riya", 20, 30) # this line give error because info have only 2 arguments and here we pass 3 argument so if we call any function it is compulsory to assign only those argument that are assigned in this particular function
 
 info("Riya", 22)
+
+
+# Bonus Questions
+
+# 25 Write a function calculator(a, b, operation="add") that returns the result of add, subtract, multiply, or divide depending on operation. Handle division by zero by returning a message.
+
+def calculator(a, b, operation="add"):
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a-b
+    elif operation == "multiply":
+        return a*b
+    elif operation == "divide":
+        if b == 0:
+            return "Can't divide by 0"
+        return a/b
+    else:
+        return "enter valid input"
+    
+# print(calculator(10,20))
+# print(calculator(10,20,"subtract"))
+# print(calculator(10,20,"multiply"))
+# print(calculator(10,20,"divide"))
+# print(calculator(10,0, "divide"))
+
+# 26 Write a function count_calls() that uses a global variable to count how many times it has been called, and prints the count each time.
+
+n = int(input("Enter value of n that how much time you want to to run the function = "))
+count = 0
+def count_calls():
+    global count
+    count += 1
+    print(count)
+
+for i in range(n):       
+    count_calls()
+    

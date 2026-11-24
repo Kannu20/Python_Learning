@@ -372,39 +372,27 @@
 # d.f3()
 # d.f4()
 
-# Bonus Questions
-
-# 25 Write a function calculator(a, b, operation="add") that returns the result of add, subtract, multiply, or divide depending on operation. Handle division by zero by returning a message.
-
-def calculator(a, b, operation="add"):
-    if operation == "add":
-        return a + b
-    elif operation == "subtract":
-        return a-b
-    elif operation == "multiply":
-        return a*b
-    elif operation == "divide":
-        if b == 0:
-            return "Can't divide by 0"
-        return a/b
-    else:
-        return "enter valid input"
+# class Book:
+#     def __init__(self, pages):
+#         self.pages = pages
+        
+#     def __add__(self, other):
+#         return self.pages + other.pages
     
-# print(calculator(10,20))
-# print(calculator(10,20,"subtract"))
-# print(calculator(10,20,"multiply"))
-# print(calculator(10,20,"divide"))
-# print(calculator(10,0, "divide"))
+# b1 = Book(10)
+# b2 = Book(20)
 
-# 26 Write a function count_calls() that uses a global variable to count how many times it has been called, and prints the count each time.
+# print(b1+b2)
 
-n = int(input("Enter value of n that how much time you want to to run the function = "))
-count = 0
-def count_calls():
-    global count
-    count += 1
-    print(count)
-
-for i in range(n):       
-    count_calls()
-    
+class Test:
+    def m1(self):
+        print("no argument")     
+        
+    def m1(self, a):
+        print("1 argument")
+        
+    def m1(self, a, b):
+        print("2 argument")
+        
+t = Test()
+t.m1(10)
