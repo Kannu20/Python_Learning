@@ -413,13 +413,27 @@
 
 # Constructor Over riding
 
-class Parent:
-    def __init__(self):
-        print("Parent Class")
+# class Parent:
+#     def __init__(self):
+#         print("Parent Class")
         
-class Child(Parent):
-    def __init__(self):
-        super().__init__()
-        print("Child Class")
+# class Child(Parent):
+#     def __init__(self):
+#         super().__init__()
+#         print("Child Class")
         
-c = Child()
+# c = Child()
+from abc import *
+class vechicle(ABC):
+    @abstractmethod
+    def wheels(self):
+        print("2 wheel")
+        
+    def color(self):
+        print("white")
+        
+v = vechicle()
+v.wheels()
+v.color()
+
+
